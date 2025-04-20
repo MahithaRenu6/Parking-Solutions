@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Payment </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1E293B 0%, #3B82F6 100%);
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center h-screen text-white">
+
+  <h1 class="text-4xl font-bold mb-4">Scan & Pay</h1>
+
+  <img 
+  src="qrcode.svg" 
+  alt="QR Code" 
+  class="p-4 bg-white shadow-lg rounded" 
+  width="250" 
+  height="250" 
+/>
+
+  <p id="status" class="mt-6 text-xl text-gray-200">⌛ Waiting for Payment...</p>
+
+  <script>
+    const status = document.getElementById("status");
+
+    setTimeout(() => {
+      status.innerText = "✅ Payment Done Successfully!";
+      status.classList.remove("text-gray-200");
+      status.classList.add("text-green-400", "font-semibold");
+    }, 5000);
+
+    setTimeout(() => {
+      alert("🎉 Congrats! Your slot is booked successfully!");
+    }, 6000);
+  </script>
+
+</body>
+</html>

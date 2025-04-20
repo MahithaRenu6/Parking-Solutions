@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="payment.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #1E293B 0%, #3B82F6 100%);
+    }
+  </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      
+      setTimeout(() => {
+        alert("Don't mind,The bank is not working currently. Kindly,Use SCANNER.");
+      }, 3000);
+
+      
+      document.querySelector(".back-arrow").addEventListener("click", () => {
+        window.history.back();
+      });
+
+    
+      document.querySelector(".use-scanner").addEventListener("click", () => {
+        window.location.href = "book.html";
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="payment-container">
+    <div class="header">
+      <span class="back-arrow">&larr;</span>
+      <h2>Payment</h2>
+      <span class="total">To pay: ₹100</span>
+    </div>
+
+    <div class="section">
+      <h3>Preferred Payment</h3>
+      <div class="option">
+        <input type="radio" name="payment" id="phonepe" />
+        <label for="phonepe">
+          <img src="pp.jpg" alt="PhonePe" /> PhonePe
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>UPI/BHIM</h3>
+      <div class="option">
+        <input type="radio" name="payment" id="upi" />
+        <label for="upi">9123456789@ybl</label>
+      </div>
+      <button class="add-new">+ ADD NEW UPI ID</button>
+    </div>
+
+    <div class="section">
+      <h3>Credit & Debit Cards</h3>
+      <button class="add-new">+ ADD NEW CARD</button>
+      <div class="card-icons">
+        <img src="visa.png" alt="VISA" />
+        <img src="mastercard.png" alt="MasterCard" />
+        <img src="amex.png" alt="Amex" />
+        <img src="paypalwebp.webp" alt="RuPay" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Net Banking</h3>
+      <div class="banks">
+        <button class="bank-option"><img src="sbi.jpg" alt="SBI" /></button>
+        <button class="bank-option"><img src="hdfc.png" alt="HDFC" /></button>
+        <button class="bank-option"><img src="Ici.png" alt="ICICI" /></button>
+        <button class="bank-option"><img src="axis.png" alt="Axis" /></button>
+        <button class="bank-option"><img src="kotak.png" alt="Kotak" /></button>
+      </div><br>
+      <button class="more-banks">MORE BANKS</button>
+      <button class="more-banks use-scanner">USE SCANNER</button>
+    </div>
+  </div>
+</body>
+</html>
